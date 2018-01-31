@@ -224,18 +224,34 @@ class Lab1Spec(lab1: Lab1Like) extends FlatSpec {
 
   "eval+" should "perform addition" in {
     assert(eval("1 + 1") === 2)
+
+    // Custom Tests
+    assert(eval("-1 + -1") === -2)
+    assert(eval("103 + 321") === 424)
   }
 
   "eval-" should "perform subtraction" in {
     assert(eval("4 - 2") === 2)
+
+    // Custom Tests
+    assert(eval("-1 - -1") === 0)
+    assert(eval("321 - 103") === 218)
   }
 
   "eval*" should "perform multiplication" in {
     assert(eval("4 * 2") === 8)
+
+    // Custom Tests
+    assert(eval("-1 * -1") === 1)
+    assert(eval("11 * 31") === 341)
   }
 
   "eval/" should "perform division" in {
     assert(eval("4 / 2") === 2)
+
+    // Custom Tests
+    assert(eval("-1 / -1") === 1)
+    assert(eval("341 / 31") === 11)
   }
 
   "eval/0" should "division by 0 should yield Infinity" in {
